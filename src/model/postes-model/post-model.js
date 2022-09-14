@@ -100,6 +100,24 @@ postes_model.hasMany(Post_like,{
   })
 
 
+  const basket_model=require("../../model/basket-check/basket-check");
+
+  postes_model.hasMany(basket_model,{
+    constraints: false,
+    timestamps: false,
+    foreignKey:"product_sale_id",
+    sourceKey:"postId"
+  })
+  basket_model.belongsTo(postes_model,{
+    constraints: false,
+    timestamps: false,
+    foreignKey:"product_sale_id",
+    targetKey:"postId"
+  })
+
+
+
+
 
 
 

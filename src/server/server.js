@@ -53,6 +53,9 @@ app.use(post_routes)
 const chate_routes=require("../routes/chate-routes/chate-routes");
 app.use(chate_routes)
 
+const basket_routes=require("../routes/basket_routes/basket_routes");
+app.use(basket_routes);
+
 
 //----------------------------------------- Soket Io ------------------------------------------------------//
 
